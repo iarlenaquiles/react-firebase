@@ -21,7 +21,7 @@ export default class App extends Component {
 
   salvarDados() {
     let database = firebase.database();
-    database.ref("pontuacao").set("100");
+    database.ref("pontuacao").set("200");
 
   }
 
