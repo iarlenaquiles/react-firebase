@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { AppRegistry, View, Text, Button } from 'react-native';
 
+import firebase from 'firebase';
+
 export default class App extends Component {
 
   render() {
