@@ -5,6 +5,10 @@ import firebase from 'firebase';
 
 export default class App extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = { pontuacao: 0}
+  }
   componentWillMount() {
 
     var config = {
@@ -37,11 +41,13 @@ export default class App extends Component {
     let pontuacao = firebase.database().ref("pontuacao");
 
     pontuacao.on('value', (snapshot) => {
-      alert(snapshot.val());
+      let pontos = snapshot.val();
+      this.setState({ pontuacao: pontos });
     });
   }
 
   render() {
+    let {pontuacao} = this.state;
     return (
       <View>
         
@@ -59,7 +65,7 @@ export default class App extends Component {
           accessibilityLabel="Listar dados"
         />
 
-        <Text>Meu App</Text>
+        <Text>{pontuacao}</Text>
       </View>
     );
   }
