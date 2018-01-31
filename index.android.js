@@ -48,7 +48,7 @@ export default class App extends Component {
           onPress={ () => { this.salvarDados(); }}
           title="Listar dados"
           color="#841584"
-          accessibilityLabel="Salvar dados"
+          accessibilityLabel="Listar dados"
         />
 
         <Text>Meu App</Text>
