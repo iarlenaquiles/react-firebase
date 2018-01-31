@@ -36,13 +36,22 @@ export default class App extends Component {
   render() {
     return (
       <View>
-        <Text>Meu App</Text>
+        
         <Button
           onPress={ () => { this.salvarDados(); }}
           title="Salvar dados"
           color="#841584"
           accessibilityLabel="Salvar dados"
         />
+
+        <Button
+          onPress={ () => { this.salvarDados(); }}
+          title="Listar dados"
+          color="#841584"
+          accessibilityLabel="Salvar dados"
+        />
+
+        <Text>Meu App</Text>
       </View>
     );
   }
