@@ -36,7 +36,9 @@ export default class App extends Component {
   listarDados() {
     let pontuacao = firebase.database().ref("pontuacao");
 
-    pontuacao.on('value');
+    pontuacao.on('value', (snapshot) => {
+      alert(snapshot.val());
+    });
   }
 
   render() {
