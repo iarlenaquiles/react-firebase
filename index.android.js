@@ -45,7 +45,7 @@ export default class App extends Component {
         />
 
         <Button
-          onPress={ () => { this.salvarDados(); }}
+          onPress={ () => { this.listarDados(); }}
           title="Listar dados"
           color="#841584"
           accessibilityLabel="Listar dados"
