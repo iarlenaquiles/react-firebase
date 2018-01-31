@@ -23,7 +23,7 @@ export default class App extends Component {
     let funcionarios = firebase.database().ref("funcionarios");
     //database.ref("pontuacao").set("200");
 
-    funcionarios.child("001").child("nome").set("Iarlen");
+    funcionarios.push().child("nome").set("Iarlen");
 
   }
 
