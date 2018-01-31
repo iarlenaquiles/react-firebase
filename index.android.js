@@ -33,6 +33,12 @@ export default class App extends Component {
 
   }
 
+  listarDados() {
+    let pontuacao = firebase.database().ref("pontuacao");
+
+    pontuacao.on('value');
+  }
+
   render() {
     return (
       <View>
