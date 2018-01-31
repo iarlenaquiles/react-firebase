@@ -20,8 +20,10 @@ export default class App extends Component {
   }
 
   salvarDados() {
-    let database = firebase.database();
-    database.ref("pontuacao").set("200");
+    let funcionarios = firebase.database().ref("funcionarios");
+    //database.ref("pontuacao").set("200");
+
+    funcionarios.child("001").child("nome").set("Iarlen");
 
   }
 
