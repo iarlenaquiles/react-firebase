@@ -19,10 +19,20 @@ export default class App extends Component {
     firebase.initializeApp(config);
   }
 
+  salvarDados() {
+
+  }
+
   render() {
     return (
       <View>
         <Text>Meu App</Text>
+        <Button
+          onPress={ () => { this.salvarDados(); }}
+          title="Salvar dados"
+          color="#841584"
+          accessibilityLabel="Salvar dados"
+        />
       </View>
     );
   }
