@@ -28,7 +28,11 @@ export default class App extends Component {
   	usuario.createUserWithEmailAndPassword(
   		email, 
   		senha
-  	);
+  	).catch(
+  		(erro) => {
+  			alert(erro.message);
+  		}
+   	);
   }
 
   render() {
