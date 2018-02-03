@@ -57,6 +57,12 @@ export default class App extends Component {
   // 	}
   }
 
+	deslogarUsuario() {
+		const usuario = firebase.auth();
+
+		usuario.signOut();
+	}
+
   render() {
     
     return (
@@ -77,7 +83,7 @@ export default class App extends Component {
         />
 
         <Button
-          onPress={ () => { this.deslogarUsuarioLogado(); }}
+          onPress={ () => { this.deslogarUsuario(); }}
           title="deslogar Usuario"
           color="#841584"
           accessibilityLabel="deslogar Usuario"
