@@ -35,6 +35,10 @@ export default class App extends Component {
    	);
   }
 
+  verificarUsuario() {
+  	
+  }
+
   render() {
     
     return (
@@ -44,9 +48,15 @@ export default class App extends Component {
           onPress={ () => { this.cadastrarUsuario(); }}
           title="Cadastrar Usuario"
           color="#841584"
-          accessibilityLabel="Salvar dados"
+          accessibilityLabel="Cadastrar Usuario"
         />
 
+		<Button
+          onPress={ () => { this.verificarUsuario(); }}
+          title="Verificar Usuario logado"
+          color="#841584"
+          accessibilityLabel="Verificar Usuario logado"
+        />
       </View>
     );
   }
