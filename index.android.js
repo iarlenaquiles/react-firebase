@@ -5,10 +5,6 @@ import firebase from 'firebase';
 
 export default class App extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = { pontuacao: 0}
-  }
   componentWillMount() {
 
     var config = {
