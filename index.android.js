@@ -88,6 +88,13 @@ export default class App extends Component {
           color="#841584"
           accessibilityLabel="deslogar Usuario"
         />
+
+        <Button
+          onPress={ () => { this.logarUsuario(); }}
+          title="Logar Usuario"
+          color="#841584"
+          accessibilityLabel="logar Usuario"
+        />
       </View>
     );
   }
