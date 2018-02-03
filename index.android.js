@@ -63,6 +63,23 @@ export default class App extends Component {
 		usuario.signOut();
 	}
 
+	logarUsuario() {
+		let email = "iarlen@gmail.com";
+  		let senha = "123456";
+
+		const usuario = firebase.auth();
+
+		usuario.signInWithEmailAndPassword(
+			email,
+			senha
+		).catch(
+			(erro) => {
+				alert(erro.message);
+			}
+		);
+	}
+
+
   render() {
     
     return (
