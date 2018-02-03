@@ -19,26 +19,30 @@ export default class App extends Component {
     firebase.initializeApp(config);
   }
 
+  cadastrarUsuario() {
+  	let email = "iarlen@gmail.com";
+  	let senha = "123456";
+
+  	const usuario = firebase.auth();
+
+  	usuario.createUserWithEmailAndPassword(
+  		email, 
+  		senha
+  	);
+  }
+
   render() {
-    let {pontuacao} = this.state;
+    
     return (
       <View>
         
         <Button
-          onPress={ () => { this.salvarDados(); }}
-          title="Salvar dados"
+          onPress={ () => { this.cadastrarUsuario(); }}
+          title="Cadastrar Usuario"
           color="#841584"
           accessibilityLabel="Salvar dados"
         />
 
-        <Button
-          onPress={ () => { this.listarDados(); }}
-          title="Listar dados"
-          color="#841584"
-          accessibilityLabel="Listar dados"
-        />
-
-        <Text>{pontuacao}</Text>
       </View>
     );
   }
