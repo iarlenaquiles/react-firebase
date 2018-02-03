@@ -19,29 +19,6 @@ export default class App extends Component {
     firebase.initializeApp(config);
   }
 
-  salvarDados() {
-    let funcionarios = firebase.database().ref("funcionarios");
-    //database.ref("pontuacao").set("200");
-
-    funcionarios.push().set(
-      {
-        nome: "Iarlem",
-        altura: "1,76",
-        peso: "120KG"
-      }
-    );
-
-  }
-
-  listarDados() {
-    let pontuacao = firebase.database().ref("pontuacao");
-
-    pontuacao.on('value', (snapshot) => {
-      let pontos = snapshot.val();
-      this.setState({ pontuacao: pontos });
-    });
-  }
-
   render() {
     let {pontuacao} = this.state;
     return (
