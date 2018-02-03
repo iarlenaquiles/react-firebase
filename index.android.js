@@ -35,8 +35,8 @@ export default class App extends Component {
    	);
   }
 
-  verificarUsuario() {
-  	
+  verificarUsuarioLogado() {
+
   }
 
   render() {
@@ -52,7 +52,7 @@ export default class App extends Component {
         />
 
 		<Button
-          onPress={ () => { this.verificarUsuario(); }}
+          onPress={ () => { this.verificarUsuarioLogado(); }}
           title="Verificar Usuario logado"
           color="#841584"
           accessibilityLabel="Verificar Usuario logado"
