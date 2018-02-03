@@ -37,13 +37,24 @@ export default class App extends Component {
 
   verificarUsuarioLogado() {
   	const usuario = firebase.auth();
-  	const usuarioAtual = usuario.currentUser;
 
-  	if (usuarioAtual) {
-  		alert("Usuário está logado");
-  	} else {
-		alert("Usuário não está logado");
-  	}
+  	usuario.onAuthStateChanged(
+  		(usuarioAtual) => {
+			if (usuarioAtual) {
+				alert("Usuário está logado");
+			} else {
+			alert("Usuário não está logado");
+			}
+  		}
+  	);
+
+  // 	const usuarioAtual = usuario.currentUser;
+
+  // 	if (usuarioAtual) {
+  // 		alert("Usuário está logado");
+  // 	} else {
+		// alert("Usuário não está logado");
+  // 	}
   }
 
   render() {
